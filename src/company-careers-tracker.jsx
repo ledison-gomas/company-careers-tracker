@@ -303,7 +303,7 @@ const CompanyCareersTracker = () => {
   };
 
   const getTimeAgo = (date) => {
-    if ('' == date)
+    if ('' === date)
       return "Never";
     const now = new Date();
     const diffMs = now - new Date(date);
