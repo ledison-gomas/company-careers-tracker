@@ -1,6 +1,6 @@
 //import React, { useState, useEffect, useMemo } from 'react';
 import React, { useState, useEffect } from 'react';
-import { Filter, Plus, Download, Upload, Trash2, Link as LinkIcon, Mail, MoreVertical, X } from 'lucide-react';
+import { Filter, Plus, Download, Upload, Trash2,  MoreVertical, X } from 'lucide-react';
 //import { ChevronDown, Filter, Plus, Download, Upload, Trash2, Link as LinkIcon, Mail, MoreVertical, X } from 'lucide-react';
 import predefinedData from "./data/companyData";
 
