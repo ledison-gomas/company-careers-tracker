@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "company": "Affirm",
+    "jobTitle": "Software Engineer",
+    "category": "Company Career Page",
+    "applyLink": "https://affirm.com/careers",
+    "contactEmail": "careers@affirm.com",
+    "lastVisited": "2026-04-30T10:30:00Z",
+    "notes": "Great benefits package, competitive salary"
+  },
+  {
+    "id": 2,
+    "company": "AssetMark",
+    "jobTitle": "Data Analyst",
+    "category": "Job Portal",
+    "applyLink": "https://assetmark.com/careers",
+    "contactEmail": "hr@assetmark.com",
+    "lastVisited": "2026-04-28T14:15:00Z",
+    "notes": "Remote friendly, work from anywhere"
+  },
+  {
+    "id": 3,
+    "company": "Proofpoint",
+    "jobTitle": "Tech Lead",
+    "category": "Company Career Page",
+    "applyLink": "https://proofpoint.com/careers",
+    "contactEmail": "careers@proofpoint.com",
+    "lastVisited": "2026-04-25T09:45:00Z",
+    "notes": "Security focused company"
+  },
+  {
+    "id": 4,
+    "company": "John Deere",
+    "jobTitle": "Software Engineer",
+    "category": "Job Portal",
+    "applyLink": "https://johndeere.com/careers",
+    "contactEmail": "careers@deere.com",
+    "lastVisited": "2026-04-23T11:20:00Z",
+    "notes": "Hybrid work arrangement"
+  },
+  {
+    "id": 5,
+    "company": "ByteDance",
+    "jobTitle": "Backend Engineer",
+    "category": "Company Career Page",
+    "applyLink": "https://bytedance.com/en/careers",
+    "contactEmail": "careers@bytedance.com",
+    "lastVisited": "2026-04-19T16:30:00Z",
+    "notes": "Competitive pay, fast-growing company"
+  },
+  {
+    "id": 6,
+    "company": "National Security Agency",
+    "jobTitle": "Cybersecurity Analyst",
+    "category": "Government Portal",
+    "applyLink": "https://nsa.gov/careers",
+    "contactEmail": "careers@nsa.gov",
+    "lastVisited": "2026-04-16T13:00:00Z",
+    "notes": "Security clearance required"
+  },
+  {
+    "id": 7,
+    "company": "Goldman Sachs",
+    "jobTitle": "Software Engineer - Backend",
+    "category": "Company Career Page",
+    "applyLink": "https://goldmansachs.com/careers",
+    "contactEmail": "careers@gs.com",
+    "lastVisited": "2026-04-14T10:00:00Z",
+    "notes": "Investment banking, tech division"
+  },
+  {
+    "id": 8,
+    "company": "Meta",
+    "jobTitle": "Senior Full Stack Engineer",
+    "category": "Company Career Page",
+    "applyLink": "https://meta.com/careers",
+    "contactEmail": "careers@meta.com",
+    "lastVisited": "2026-04-12T15:45:00Z",
+    "notes": "High-scale systems, AI/ML focus"
+  },
+  {
+    "id": 9,
+    "company": "Google",
+    "jobTitle": "Cloud Solutions Architect",
+    "category": "Job Portal",
+    "applyLink": "https://careers.google.com",
+    "contactEmail": "careers@google.com",
+    "lastVisited": "2026-04-10T12:30:00Z",
+    "notes": "GCP team, good benefits"
+  },
+  {
+    "id": 10,
+    "company": "Amazon",
+    "jobTitle": "Software Development Engineer II",
+    "category": "Company Career Page",
+    "applyLink": "https://amazon.jobs",
+    "contactEmail": "careers@amazon.com",
+    "lastVisited": "2026-04-08T09:15:00Z",
+    "notes": "AWS team, excellent stock options"
+  }
+]
