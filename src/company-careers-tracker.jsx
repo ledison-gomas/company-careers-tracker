@@ -17,7 +17,7 @@ const CompanyCareersTracker = () => {
   // Filter states
   const [filters, setFilters] = useState({
     companyInclude: [],
-    companyExclude: ["HPE","Wipro"],
+    companyExclude: ["HPE", "Wipro"],
     categories: [],
     daysSinceVisit: null,
     searchTerm: ''
@@ -160,17 +160,24 @@ const CompanyCareersTracker = () => {
     // Days since visit filter
     if (filters.daysSinceVisit) {
       const cutoffDate = new Date(Date.now() - filters.daysSinceVisit * 24 * 60 * 60 * 1000);
-      filtered = filtered.filter(r => new Date(r.lastVisited) < cutoffDate);
+      filtered = filtered.filter(r => new Date(('' === r.lastVisited ? 0 : r.lastVisited)) < cutoffDate);
     }
 
     // Search filter
     if (filters.searchTerm) {
       const term = filters.searchTerm.toLowerCase();
-      filtered = filtered.filter(r =>
-        r.company.toLowerCase().includes(term) ||
-        r.jobTitle.toLowerCase().includes(term) ||
-        r.contactEmail.toLowerCase().includes(term)
-      );
+
+      filtered = filtered.filter(r => {
+        const company = r.company?.toLowerCase() || "";
+        const jobTitle = r.jobTitle?.toLowerCase() || "";
+        const email = r.contactEmail?.toLowerCase() || "";
+
+        return (
+          company.includes(term) ||
+          jobTitle.includes(term) ||
+          email.includes(term)
+        );
+      });
     }
 
     // Sort
@@ -181,8 +188,18 @@ const CompanyCareersTracker = () => {
         aVal = a.company.toLowerCase();
         bVal = b.company.toLowerCase();
       } else if (sortBy === 'lastVisited') {
-        aVal = new Date(a.lastVisited);
-        bVal = new Date(b.lastVisited);
+        if ('' === a.lastVisited) {
+          aVal = new Date(0);
+        }
+        else
+          aVal = new Date(a.lastVisited);
+        //aVal = new Date(a.lastVisited);
+        if ('' === b.lastVisited) {
+          bVal = new Date(0);
+        }
+        else
+          bVal = new Date(b.lastVisited);
+        //bVal = new Date(b.lastVisited);
       } else if (sortBy === 'category') {
         aVal = a.category.toLowerCase();
         bVal = b.category.toLowerCase();
@@ -578,7 +595,8 @@ const CompanyCareersTracker = () => {
                   {/*<th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Job Title</th>*/}
                   <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Category</th>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Last Visited</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Contact</th>
+                  <th className="px-6 py-4 text-sm font-semibold text-slate-700">Apply</th>
+                  <th className="px-6 py-4 text-sm font-semibold text-slate-700">Email</th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-slate-700">Actions</th>
                 </tr>
               </thead>
@@ -629,29 +647,49 @@ const CompanyCareersTracker = () => {
                         </button>
                       </td>
                       <td className="px-6 py-2">
-                        <div className="flex items-center gap-2">
-                          {record.applyLink && (
-                            <a
-                              href={record.applyLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={() => handleLastVisitedUpdate(record.id)} // 👈 KEY
-                              className="text-blue-600 hover:text-blue-700"
-                              title="Open careers page"
-                            >
-                              <LinkIcon size={18} />
-                            </a>
-                          )}
-                          {record.contactEmail && (
+                        {record.applyLink ? (
+                          <a
+                            href={record.applyLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => handleLastVisitedUpdate(record.id)}
+                            className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                            title="Open careers page"
+                          >
+                            🚀 Apply
+                          </a>
+                        ) : (
+                          <span className="text-slate-400 text-sm">—</span>
+                        )}
+                      </td>
+
+                      <td className="px-6 py-2">
+                        {record.contactEmail ? (
+                          <div className="flex items-center gap-2">
+                            {/* Open Mail */}
                             <a
                               href={`mailto:${record.contactEmail}`}
                               className="text-emerald-600 hover:text-emerald-700 transition-colors"
                               title="Send email"
                             >
-                              <Mail size={18} />
+                              📧
                             </a>
-                          )}
-                        </div>
+
+                            {/* Copy Email */}
+                            <button
+                              onClick={() => {
+                                navigator.clipboard.writeText(record.contactEmail);
+                                alert("Email copied!");
+                              }}
+                              className="text-slate-500 hover:text-slate-700 text-xs border px-2 py-1 rounded"
+                              title="Copy email"
+                            >
+                              Copy
+                            </button>
+                          </div>
+                        ) : (
+                          <span className="text-slate-400 text-sm">—</span>
+                        )}
                       </td>
                       <td className="px-6 py-2 text-center">
                         <button
@@ -694,8 +732,8 @@ const CompanyCareersTracker = () => {
                         key={pageNum}
                         onClick={() => setCurrentPage(pageNum)}
                         className={`px-3 py-2 rounded-lg transition-colors ${currentPage === pageNum
-                            ? 'bg-indigo-600 text-white'
-                            : 'border border-slate-300 hover:bg-slate-100'
+                          ? 'bg-indigo-600 text-white'
+                          : 'border border-slate-300 hover:bg-slate-100'
                           }`}
                       >
                         {pageNum}

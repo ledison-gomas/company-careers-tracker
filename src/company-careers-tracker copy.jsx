@@ -594,9 +594,9 @@ const CompanyCareersTracker = () => {
                       </td>
                       <td className="px-6 py-4">
                         <button
-                          onClick={() => handleLastVisitedUpdate(record.id)}
-                          className="text-indigo-600 hover:text-indigo-700 font-medium text-sm hover:underline"
-                          title="Click to update to now"
+                          /* onClick={() => handleLastVisitedUpdate(record.id)}
+                           className="text-indigo-600 hover:text-indigo-700 font-medium text-sm hover:underline"
+                          title="Click to update to now" */
                         >
                           {getTimeAgo(record.lastVisited)}
                         </button>

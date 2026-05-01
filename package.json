@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A modern web application for tracking and managing your job application journey across companies",
   "private": false,
-  "homepage": "https://ledisongomas.github.io/company-careers-tracker-build",
   "keywords": [
     "job-tracker",
     "career",
