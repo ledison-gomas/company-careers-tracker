@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/company-careers-tracker-build/static/css/main.a95c40df.css",
+    "main.js": "/company-careers-tracker-build/static/js/main.45e198da.js",
+    "index.html": "/company-careers-tracker-build/index.html",
+    "main.a95c40df.css.map": "/company-careers-tracker-build/static/css/main.a95c40df.css.map",
+    "main.45e198da.js.map": "/company-careers-tracker-build/static/js/main.45e198da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a95c40df.css",
+    "static/js/main.45e198da.js"
+  ]
+}
