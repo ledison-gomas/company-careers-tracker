@@ -222,7 +222,8 @@ Modify the `categories` array in the component:
 const categories = [
   'Job Portal',
   'Company Career Page',
-  'Recruitment Agency',
+  'Recruitment Agency India',
+  'Recruitment Agency Singapore',
   'LinkedIn',
   'Internal',
   'Referral',
