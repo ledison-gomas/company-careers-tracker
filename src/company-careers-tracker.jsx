@@ -1,9 +1,15 @@
 //import React, { useState, useEffect, useMemo } from 'react';
 import React, { useState, useEffect } from 'react';
-import { Filter, Plus, Download, Upload, Trash2,  MoreVertical, X } from 'lucide-react';
+import { Filter, Plus, Download, Upload, Trash2, MoreVertical, X } from 'lucide-react';
 //import { ChevronDown, Filter, Plus, Download, Upload, Trash2, Link as LinkIcon, Mail, MoreVertical, X } from 'lucide-react';
-import predefinedData from "./data/companyData";
+import companyData from "./data/companyData";
+import jobPortalAgencyData from './data/jobportalAgency';
 
+const predefinedData = [...companyData, ...jobPortalAgencyData];
+
+const uniquePredefinedData = Array.from(
+  new Map(predefinedData.map(c => [c.company.toLowerCase(), c])).values()
+);
 
 const CompanyCareersTracker = () => {
   const [records, setRecords] = useState([]);
@@ -11,7 +17,7 @@ const CompanyCareersTracker = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedRecords, setSelectedRecords] = useState(new Set());
   const [showAddModal, setShowAddModal] = useState(false);
-  const [showFilterPanel, setShowFilterPanel] = useState(false);
+  const [showFilterPanel, setShowFilterPanel] = useState(true);
   const [editingRecord, setEditingRecord] = useState(null);
 
   // Filter states
@@ -40,7 +46,8 @@ const CompanyCareersTracker = () => {
   const categories = [
     'Job Portal',
     'Company Career Page',
-    'Recruitment Agency',
+    'Recruitment Agency India',
+    'Recruitment Agency Singapore',
     'LinkedIn',
     'Internal',
     'Referral',
@@ -99,7 +106,7 @@ const CompanyCareersTracker = () => {
         : 1;
 
     // 4. Merge predefined data
-    predefinedData.forEach((item) => {
+    uniquePredefinedData.forEach((item) => {
       const key = normalizeCompany(item.company);
       if (!key) return;
 
@@ -320,16 +327,27 @@ const CompanyCareersTracker = () => {
   };
 
   const getTimeAgo = (date) => {
-    if ('' === date)
-      return "Never";
+    if (!date) return "Never";
+
     const now = new Date();
-    const diffMs = now - new Date(date);
+    const past = new Date(date);
+
+    const diffMs = now - past;
+
+    const diffMinutes = Math.floor(diffMs / (1000 * 60));
+    const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
-    if (diffDays === 0) return 'Today';
-    if (diffDays === 1) return 'Yesterday';
+    // 🕒 Same day → show minutes / hours
+    if (diffMinutes < 1) return "Just now";
+    if (diffMinutes < 60) return `Today - ${diffMinutes}m ago`;
+    if (diffHours < 24) return `Today - ${diffHours}h ago`;
+
+    // 📅 Days
+    if (diffDays === 1) return "Yesterday";
     if (diffDays < 7) return `${diffDays}d ago`;
     if (diffDays < 30) return `${Math.floor(diffDays / 7)}w ago`;
+
     return `${Math.floor(diffDays / 30)}mo ago`;
   };
 
@@ -337,7 +355,8 @@ const CompanyCareersTracker = () => {
     const colors = {
       'Company Career Page': 'bg-blue-100 text-blue-800',
       'Job Portal': 'bg-green-100 text-green-800',
-      'Recruitment Agency': 'bg-purple-100 text-purple-800',
+      'Recruitment Agency India': 'bg-purple-100 text-purple-800',
+      'Recruitment Agency Singapore': 'bg-orange-100 text-orange-800',
       'LinkedIn': 'bg-blue-100 text-blue-800',
       'Internal': 'bg-orange-100 text-orange-800',
       'Referral': 'bg-pink-100 text-pink-800',
@@ -638,13 +657,13 @@ const CompanyCareersTracker = () => {
                         </span>
                       </td>
                       <td className="px-6 py-2">
-                        <button
-                          onClick={() => handleLastVisitedUpdate(record.id)}
-                          className="text-indigo-600 hover:text-indigo-700 font-medium text-sm hover:underline"
-                          title="Click to update to now"
+                        <div
+                          // onClick={() => handleLastVisitedUpdate(record.id)}
+                          className="text-indigo-600 font-medium text-sm"
+                          // title="Click to update to now"
                         >
                           {getTimeAgo(record.lastVisited)}
-                        </button>
+                        </div>
                       </td>
                       <td className="px-6 py-2">
                         {record.applyLink ? (
