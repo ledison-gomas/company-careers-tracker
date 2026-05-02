@@ -23,7 +23,7 @@ const CompanyCareersTracker = () => {
   // Filter states
   const [filters, setFilters] = useState({
     companyInclude: [],
-    companyExclude: ["HPE", "Wipro"],
+    companyExclude: ["HPE", "Wipro","Nokia","Abode"],
     categories: [],
     daysSinceVisit: null,
     searchTerm: ''
@@ -54,6 +54,17 @@ const CompanyCareersTracker = () => {
     'Other'
   ];
 
+  const categoryOptions = [
+    { label: "Job Portal", emoji: "🌐" },
+    { label: "Company Career Page", emoji: "🏢" },
+    { label: "Recruitment Agency India", emoji: "🇮🇳" },
+    { label: "Recruitment Agency Singapore", emoji: "🇸🇬" },
+    { label: "LinkedIn", emoji: "💼" },
+    { label: "Internal", emoji: "🏠" },
+    { label: "Referral", emoji: "🤝" },
+    { label: "Other", emoji: "📦" }
+  ];
+  
   const dayFilters = [
     { label: 'Not visited in 3 days', value: 3 },
     { label: 'Not visited in 5 days', value: 5 },
@@ -305,6 +316,19 @@ const CompanyCareersTracker = () => {
     }
   };
 
+  const toggleCategory = (cat) => {
+    setFilters(prev => {
+      const exists = prev.categories.includes(cat);
+
+      return {
+        ...prev,
+        categories: exists
+          ? prev.categories.filter(c => c !== cat) // remove
+          : [...prev.categories, cat] // add
+      };
+    });
+  };
+
   const handleRecordClick = (record) => {
     setEditingRecord(record);
     setFormData(record);
@@ -507,7 +531,7 @@ const CompanyCareersTracker = () => {
               </div>
 
               {/* Categories */}
-              <div>
+              {/* <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-3">Categories</label>
                 <div className="space-y-2 max-h-40 overflow-y-auto">
                   {categories.map(cat => (
@@ -528,7 +552,7 @@ const CompanyCareersTracker = () => {
                     </label>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* Days Since Visit */}
               <div>
@@ -587,6 +611,31 @@ const CompanyCareersTracker = () => {
                 <Trash2 size={16} /> Delete {selectedRecords.size}
               </button>
             )}
+          </div>
+
+          <div className="flex items-center gap-4 mt-4 pt-4 border-t border-slate-200">
+            <span className="text-sm text-slate-600 font-medium">Categories by:</span>
+            <div className="flex flex-wrap gap-2">
+              {categoryOptions.map(cat => {
+                const isActive = filters.categories.includes(cat.label);
+
+                return (
+                  <button
+                    key={cat.label}
+                    onClick={() => toggleCategory(cat.label)}
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium transition-all border
+                      ${isActive
+                        ? "bg-indigo-600 text-white border-indigo-600 shadow"
+                        : "bg-white text-slate-700 border-slate-300 hover:bg-slate-100"
+                      }
+                    `}
+                  >
+                    <span>{cat.emoji}</span>
+                    <span>{cat.label}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 
@@ -660,7 +709,7 @@ const CompanyCareersTracker = () => {
                         <div
                           // onClick={() => handleLastVisitedUpdate(record.id)}
                           className="text-indigo-600 font-medium text-sm"
-                          // title="Click to update to now"
+                        // title="Click to update to now"
                         >
                           {getTimeAgo(record.lastVisited)}
                         </div>
