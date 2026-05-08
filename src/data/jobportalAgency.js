@@ -22,6 +22,8 @@ const jobPortalAgencyData = [
     { company: "Level.fyi", category: "Job Portal", applyLink: "https://www.levels.fyi/jobs", contactEmail: "" },
     { company: "heynavii", category: "Job Portal", applyLink: "https://app.heynavii.ai/", contactEmail: "" },
     { company: "greenhouse", category: "Job Portal", applyLink: "https://my.greenhouse.io/", contactEmail: "" },
+    { company: "weekday", category: "Recruitment Agency India", applyLink: "https://jobs.weekday.works/", contactEmail: "" },
+    { company: "allianceinternational", category: "Recruitment Agency India", applyLink: "https://www.allianceinternational.co.in", contactEmail: "" },
 ]
 
 export default jobPortalAgencyData;

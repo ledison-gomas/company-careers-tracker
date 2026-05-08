@@ -10,7 +10,7 @@ const companyData = [
   { company: "AMD", category: "Company Career Page", applyLink: "https://www.amd.com/en/corporate/careers", contactEmail: "" },
   { company: "Intel", category: "Company Career Page", applyLink: "https://jobs.intel.com", contactEmail: "" },
   { company: "Qualcomm", category: "Company Career Page", applyLink: "https://www.qualcomm.com/company/careers", contactEmail: "" },
-  { company: "Broadcom", category: "Company Career Page", applyLink: "https://jobs.broadcom.com", contactEmail: "" },
+  { company: "Broadcom", category: "Company Career Page", applyLink: "https://www.broadcom.com/company/careers", contactEmail: "" },
   { company: "Texas Instruments", category: "Company Career Page", applyLink: "https://careers.ti.com", contactEmail: "" },
   { company: "Analog Devices", category: "Company Career Page", applyLink: "https://careers.analog.com", contactEmail: "" },
   { company: "Marvell", category: "Company Career Page", applyLink: "https://www.marvell.com/company/careers.html", contactEmail: "" },
@@ -18,7 +18,7 @@ const companyData = [
   { company: "Western Digital", category: "Company Career Page", applyLink: "https://jobs.westerndigital.com", contactEmail: "" },
   { company: "Samsung Electronics", category: "Company Career Page", applyLink: "https://www.samsung.com/global/careers", contactEmail: "" },
   { company: "Sony", category: "Company Career Page", applyLink: "https://www.sonyjobs.com", contactEmail: "" },
-  { company: "Bosch", category: "Company Career Page", applyLink: "https://careers.bosch.com", contactEmail: "" },
+  { company: "Bosch", category: "Company Career Page", applyLink: "https://www.bosch.in/careers/", contactEmail: "" },
   { company: "Siemens", category: "Company Career Page", applyLink: "https://jobs.siemens.com", contactEmail: "" },
   { company: "Honeywell", category: "Company Career Page", applyLink: "https://careers.honeywell.com", contactEmail: "" },
 
@@ -33,7 +33,7 @@ const companyData = [
 
   { company: "Cisco", category: "Company Career Page", applyLink: "https://jobs.cisco.com", contactEmail: "" },
   { company: "Juniper Networks", category: "Company Career Page", applyLink: "https://jobs.juniper.net", contactEmail: "" },
-  { company: "Arista Networks", category: "Company Career Page", applyLink: "https://careers.arista.com", contactEmail: "" },
+  { company: "Arista Networks", category: "Company Career Page", applyLink: "https://www.arista.com/en/careers", contactEmail: "" },
 
   { company: "VMware", category: "Company Career Page", applyLink: "https://careers.vmware.com", contactEmail: "" },
   { company: "Red Hat", category: "Company Career Page", applyLink: "https://careers.redhat.com", contactEmail: "" },
@@ -108,7 +108,7 @@ const companyData = [
   { company: "Rakuten", category: "Company Career Page", applyLink: "https://global.rakuten.com/corp/careers", contactEmail: "" },
   { company: "Tencent", category: "Company Career Page", applyLink: "https://careers.tencent.com", contactEmail: "" },
   { company: "ByteDance", category: "Company Career Page", applyLink: "https://jobs.bytedance.com", contactEmail: "" },
-    { company: "Square (Block)", category: "Company Career Page", applyLink: "https://careers.block.xyz", contactEmail: "" },
+  { company: "Square (Block)", category: "Company Career Page", applyLink: "https://careers.block.xyz", contactEmail: "" },
   { company: "Adyen", category: "Company Career Page", applyLink: "https://careers.adyen.com", contactEmail: "" },
   { company: "Grab", category: "Company Career Page", applyLink: "https://grab.careers", contactEmail: "" },
   { company: "Gojek", category: "Company Career Page", applyLink: "https://careers.gojek.io", contactEmail: "" },
@@ -152,7 +152,16 @@ const companyData = [
   { company: "Snap", category: "Company Career Page", applyLink: "https://careers.snap.com", contactEmail: "" },
   { company: "Pinterest", category: "Company Career Page", applyLink: "https://careers.pinterest.com", contactEmail: "" },
   { company: "Reddit", category: "Company Career Page", applyLink: "https://www.redditinc.com/careers", contactEmail: "" },
-  { company: "Quora", category: "Company Career Page", applyLink: "https://www.quora.com/careers", contactEmail: "" }
+  { company: "Quora", category: "Company Career Page", applyLink: "https://www.quora.com/careers", contactEmail: "" },
+  { company: "standard chartered", category: "Company Career Page", applyLink: "https://jobs.standardchartered.com/", contactEmail: "" },
+  { company: "purestorage", category: "Company Career Page", applyLink: "https://www.purestorage.com/company/careers.html", contactEmail: "" },
+  { company: "caterpillar", category: "Company Career Page", applyLink: "https://careers.caterpillar.com/en/jobs", contactEmail: "" },
+  { company: "philips", category: "Company Career Page", applyLink: "https://www.careers.philips.com/in/en/search-results", contactEmail: "" },
+  { company: "sophos", category: "Company Career Page", applyLink: "https://www.sophos.com/en-us/company/careers", contactEmail: "" },
+  { company: "baxter", category: "Company Career Page", applyLink: "https://jobs.baxter.com/en/search-jobs", contactEmail: "" },
+  { company: "nvidia", category: "Company Career Page", applyLink: "https://www.nvidia.com/en-in/about-nvidia/careers/", contactEmail: "" },
+  { company: "proxelera", category: "Company Career Page", applyLink: "https://proxelera.com/proxelera-careers/", contactEmail: "" },
+  { company: "cohesity", category: "Company Career Page", applyLink: "https://www.cohesity.com/careers/open-positions/", contactEmail: "" }
 ];
 
 export default companyData;
