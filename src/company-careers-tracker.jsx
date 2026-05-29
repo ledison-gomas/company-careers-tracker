@@ -68,7 +68,9 @@ const CompanyCareersTracker = () => {
   const dayFilters = [
     { label: 'Not visited in 3 days', value: 3 },
     { label: 'Not visited in 5 days', value: 5 },
-    { label: 'Not visited in 10 days', value: 10 }
+    { label: 'Not visited in 10 days', value: 10 },
+    { label: 'Not visited in 30 days', value: 30 },
+    { label: 'Never', value: -1 }
   ];
 
   // Load sample data on mount
@@ -185,8 +187,12 @@ const CompanyCareersTracker = () => {
 
     // Days since visit filter
     if (filters.daysSinceVisit) {
-      const cutoffDate = new Date(Date.now() - filters.daysSinceVisit * 24 * 60 * 60 * 1000);
-      filtered = filtered.filter(r => new Date(('' === r.lastVisited ? 0 : r.lastVisited)) < cutoffDate);
+      if (-1 === filters.daysSinceVisit) {
+        filtered = filtered.filter(r => ('' === r.lastVisited));
+      } else {
+        const cutoffDate = new Date(Date.now() - filters.daysSinceVisit * 24 * 60 * 60 * 1000);
+        filtered = filtered.filter(r => new Date(('' === r.lastVisited ? 0 : r.lastVisited)) < cutoffDate);
+      }
     }
 
     // Search filter
@@ -559,7 +565,7 @@ const CompanyCareersTracker = () => {
               </div> */}
 
               {/* Days Since Visit */}
-              <div>
+              <div className='col-span-2'>
                 <label className="block text-sm font-semibold text-slate-700 mb-3">Last Visited</label>
                 <div className="space-y-2">
                   {dayFilters.map(filter => (
