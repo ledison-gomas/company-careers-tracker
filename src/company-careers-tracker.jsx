@@ -23,7 +23,7 @@ const CompanyCareersTracker = () => {
   // Filter states
   const [filters, setFilters] = useState({
     companyInclude: [],
-    companyExclude: ["HPE", "Wipro","Nokia","Abode"],
+    companyExclude: ["HPE", "Wipro", "Nokia", "Abode"],
     categories: [],
     daysSinceVisit: null,
     searchTerm: ''
@@ -64,7 +64,7 @@ const CompanyCareersTracker = () => {
     { label: "Referral", emoji: "🤝" },
     { label: "Other", emoji: "📦" }
   ];
-  
+
   const dayFilters = [
     { label: 'Not visited in 3 days', value: 3 },
     { label: 'Not visited in 5 days', value: 5 },
@@ -152,6 +152,14 @@ const CompanyCareersTracker = () => {
     localStorage.setItem("career_records", JSON.stringify(records));
   }, [records]);
 
+
+  const recordsPerPage = 50;
+  const totalPages = Math.ceil(filteredRecords.length / recordsPerPage);
+  const paginatedRecords = filteredRecords.slice(
+    (currentPage - 1) * recordsPerPage,
+    currentPage * recordsPerPage
+  );
+
   // Apply filters
   useEffect(() => {
     let filtered = [...records];
@@ -229,15 +237,11 @@ const CompanyCareersTracker = () => {
     });
 
     setFilteredRecords(filtered);
-    setCurrentPage(1);
+    //if(totalPages < currentPage) {
+    //setCurrentPage(1);
+    //}
   }, [records, filters, sortBy, sortOrder]);
 
-  const recordsPerPage = 50;
-  const totalPages = Math.ceil(filteredRecords.length / recordsPerPage);
-  const paginatedRecords = filteredRecords.slice(
-    (currentPage - 1) * recordsPerPage,
-    currentPage * recordsPerPage
-  );
 
   const handleAddRecord = () => {
     if (!formData.company.trim()) {
