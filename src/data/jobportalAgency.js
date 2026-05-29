@@ -24,6 +24,8 @@ const jobPortalAgencyData = [
     { company: "greenhouse", category: "Job Portal", applyLink: "https://my.greenhouse.io/", contactEmail: "" },
     { company: "weekday", category: "Recruitment Agency India", applyLink: "https://jobs.weekday.works/", contactEmail: "" },
     { company: "allianceinternational", category: "Recruitment Agency India", applyLink: "https://www.allianceinternational.co.in", contactEmail: "" },
+    { company: "welcometothejungle", category: "Job Portal", applyLink: "https://www.welcometothejungle.com", contactEmail: "" },
+    { company: "jobaaj", category: "Job Portal", applyLink: "https://www.jobaaj.com", contactEmail: "" },
 ]
 
 export default jobPortalAgencyData;
