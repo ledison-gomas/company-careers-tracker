@@ -162,7 +162,7 @@ const companyData = [
   { company: "nvidia", category: "Company Career Page", applyLink: "https://www.nvidia.com/en-in/about-nvidia/careers/", contactEmail: "" },
   { company: "proxelera", category: "Company Career Page", applyLink: "https://proxelera.com/proxelera-careers/", contactEmail: "" },
   { company: "cohesity", category: "Company Career Page", applyLink: "https://www.cohesity.com/careers/open-positions/", contactEmail: "" },
-    { company: "OpenAI", category: "Company Career Page", applyLink: "https://openai.com/careers", contactEmail: "" },
+  { company: "OpenAI", category: "Company Career Page", applyLink: "https://openai.com/careers", contactEmail: "" },
   { company: "Anthropic", category: "Company Career Page", applyLink: "https://www.anthropic.com/careers", contactEmail: "" },
   { company: "Mistral AI", category: "Company Career Page", applyLink: "https://mistral.ai/careers", contactEmail: "" },
   { company: "Cohere", category: "Company Career Page", applyLink: "https://cohere.com/careers", contactEmail: "" },
@@ -242,6 +242,23 @@ const companyData = [
   { company: "graphcore", category: "Company Career Page", applyLink: "https://www.graphcore.ai/jobs", contactEmail: "" },
   { company: "sonatus", category: "Company Career Page", applyLink: "https://www.sonatus.com/company/careers/", contactEmail: "" },
   { company: "keka", category: "Company Career Page", applyLink: "https://hr.keka.com/careers", contactEmail: "" },
+  { company: "Citadel Securities", category: "Company Career Page", applyLink: "https://www.citadelsecurities.com/careers", contactEmail: "" },
+  { company: "DRW", category: "Company Career Page", applyLink: "https://drw.com/work-at-drw", contactEmail: "" },
+  { company: "Tower Research Capital", category: "Company Career Page", applyLink: "https://www.tower-research.com/careers", contactEmail: "" },
+  { company: "Five Rings", category: "Company Career Page", applyLink: "https://fiverings.com/careers", contactEmail: "" },
+  { company: "Flow Traders", category: "Company Career Page", applyLink: "https://www.flowtraders.com/careers", contactEmail: "" },
+  { company: "Akuna Capital", category: "Company Career Page", applyLink: "https://akunacapital.com/careers", contactEmail: "" },
+  { company: "Virtu Financial", category: "Company Career Page", applyLink: "https://www.virtu.com/careers", contactEmail: "" },
+  { company: "NXP Semiconductors", category: "Company Career Page", applyLink: "https://www.nxp.com/company/about-nxp/careers", contactEmail: "" },
+  { company: "Chargebee", category: "Company Career Page", applyLink: "https://www.chargebee.com/careers", contactEmail: "" },
+  { company: "Postman", category: "Company Career Page", applyLink: "https://www.postman.com/company/careers", contactEmail: "" },
+  { company: "Razorpay", category: "Company Career Page", applyLink: "https://razorpay.com/jobs", contactEmail: "" },
+  { company: "BrowserStack", category: "Company Career Page", applyLink: "https://www.browserstack.com/careers", contactEmail: "" },
+  { company: "Continental", category: "Company Career Page", applyLink: "https://www.continental.com/en/career", contactEmail: "" },
+  { company: "Valeo", category: "Company Career Page", applyLink: "https://www.valeo.com/en/career", contactEmail: "" },
+  { company: "Visteon", category: "Company Career Page", applyLink: "https://careers.visteon.com", contactEmail: "" },
+  { company: "Aptiv", category: "Company Career Page", applyLink: "https://jobs.aptiv.com", contactEmail: "" },
+  { company: "Harman", category: "Company Career Page", applyLink: "https://jobs.harman.com", contactEmail: "" }
 
 
 ];

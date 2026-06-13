@@ -26,6 +26,11 @@ const jobPortalAgencyData = [
     { company: "allianceinternational", category: "Recruitment Agency India", applyLink: "https://www.allianceinternational.co.in", contactEmail: "" },
     { company: "welcometothejungle", category: "Job Portal", applyLink: "https://www.welcometothejungle.com", contactEmail: "" },
     { company: "jobaaj", category: "Job Portal", applyLink: "https://www.jobaaj.com", contactEmail: "" },
+    { company: "BuiltIn", category: "Job Portal", applyLink: "https://builtin.com/jobs", contactEmail: "" },
+    { company: "ZipRecruiter", category: "Job Portal", applyLink: "https://www.ziprecruiter.in/", contactEmail: "" },
+    { company: "YCombinator", category: "Job Portal", applyLink: "https://www.ycombinator.com/jobs", contactEmail: "" },
+    { company: "Hiring Cafe", category: "Job Portal", applyLink: "https://hiring.cafe/", contactEmail: "" },
+
 ]
 
 export default jobPortalAgencyData;
