@@ -258,9 +258,16 @@ const companyData = [
   { company: "Valeo", category: "Company Career Page", applyLink: "https://www.valeo.com/en/career", contactEmail: "" },
   { company: "Visteon", category: "Company Career Page", applyLink: "https://careers.visteon.com", contactEmail: "" },
   { company: "Aptiv", category: "Company Career Page", applyLink: "https://jobs.aptiv.com", contactEmail: "" },
-  { company: "Harman", category: "Company Career Page", applyLink: "https://jobs.harman.com", contactEmail: "" }
+  { company: "Harman", category: "Company Career Page", applyLink: "https://jobs.harman.com", contactEmail: "" },
+  { company: "yugabyte", category: "Company Career Page", applyLink: "https://www.yugabyte.com/careers/#job-openings", contactEmail: "" },
+  { company: "deloitte", category: "Company Career Page", applyLink: "https://www.deloitte.com/global/en/careers/job-search.html", contactEmail: "" },
+  { company: "maersk", category: "Company Career Page", applyLink: "https://www.maersk.com/careers", contactEmail: "" },
+  { company: "novo nordisk", category: "Company Career Page", applyLink: "https://www.novonordisk.co.in/careers/find-a-job.html", contactEmail: "" },
 
+  { company: "quest-global", category: "Company Career Page", applyLink: "https://careers.quest-global.com/global/en/home", contactEmail: "" },
+  { company: "multicorewareinc", category: "Company Career Page", applyLink: "https://multicorewareinc.com/careers/", contactEmail: "" },
 
+  
 ];
 
 export default companyData;

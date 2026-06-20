@@ -30,7 +30,12 @@ const jobPortalAgencyData = [
     { company: "ZipRecruiter", category: "Job Portal", applyLink: "https://www.ziprecruiter.in/", contactEmail: "" },
     { company: "YCombinator", category: "Job Portal", applyLink: "https://www.ycombinator.com/jobs", contactEmail: "" },
     { company: "Hiring Cafe", category: "Job Portal", applyLink: "https://hiring.cafe/", contactEmail: "" },
-
+    { company: "Simply Hired", category: "Job Portal", applyLink: "https://www.simplyhired.com/", contactEmail: "" },
+    { company: "hays de", category: "Germany", applyLink: "https://www.hays.de", contactEmail: "" },
+    { company: "randstad de", category: "Germany", applyLink: "https://www.randstad.de", contactEmail: "" },
+    { company: "roberthalf.de", category: "Germany", applyLink: "https://www.roberthalf.de", contactEmail: "" },
+    { company: "kellyservices.de", category: "Germany", applyLink: "https://www.kellyservices.de", contactEmail: "" },
+    { company: "michaelpage.de", category: "Germany", applyLink: "https://www.michaelpage.de", contactEmail: "" },
 ]
 
 export default jobPortalAgencyData;

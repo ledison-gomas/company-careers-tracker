@@ -51,6 +51,7 @@ const CompanyCareersTracker = () => {
     'LinkedIn',
     'Internal',
     'Referral',
+    'Germany',
     'Other'
   ];
 
@@ -62,6 +63,7 @@ const CompanyCareersTracker = () => {
     { label: "LinkedIn", emoji: "💼" },
     { label: "Internal", emoji: "🏠" },
     { label: "Referral", emoji: "🤝" },
+    { label: "Germany", emoji: "🇩🇪" },
     { label: "Other", emoji: "📦" }
   ];
 
@@ -361,29 +363,40 @@ const CompanyCareersTracker = () => {
   };
 
   const getTimeAgo = (date) => {
-    if (!date) return "Never";
+  if (!date) return "Never";
 
-    const now = new Date();
-    const past = new Date(date);
+  const now = new Date();
+  const past = new Date(date);
 
-    const diffMs = now - past;
+  const diffMs = now - past;
 
-    const diffMinutes = Math.floor(diffMs / (1000 * 60));
-    const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+  const diffMinutes = Math.floor(diffMs / (1000 * 60));
+  const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
-    // 🕒 Same day → show minutes / hours
-    if (diffMinutes < 1) return "Just now";
-    if (diffMinutes < 60) return `Today - ${diffMinutes}m ago`;
-    if (diffHours < 24) return `Today - ${diffHours}h ago`;
+  if (diffMinutes < 1) return "Just now";
+  if (diffMinutes < 60) return `${diffMinutes}m ago`;
+  if (diffHours < 24) return `${diffHours}h ago`;
 
-    // 📅 Days
-    if (diffDays === 1) return "Yesterday";
-    if (diffDays < 7) return `${diffDays}d ago`;
-    if (diffDays < 30) return `${Math.floor(diffDays / 7)}w ago`;
+  if (diffDays === 1) return "Yesterday";
+  if (diffDays < 7) return `${diffDays}d ago`;
 
-    return `${Math.floor(diffDays / 30)}mo ago`;
-  };
+  if (diffDays < 30) {
+    const weeks = Math.floor(diffDays / 7);
+    const days = diffDays % 7;
+
+    return days > 0
+      ? `${weeks}w ${days}d ago`
+      : `${weeks}w ago`;
+  }
+
+  const months = Math.floor(diffDays / 30);
+  const remainingDays = diffDays % 30;
+
+  return remainingDays > 0
+    ? `${months}mo ${remainingDays}d ago`
+    : `${months}mo ago`;
+};
 
   const getCategoryColor = (category) => {
     const colors = {
