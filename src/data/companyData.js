@@ -270,7 +270,6 @@ const companyData = [
     { company: "Mentor Graphics (Siemens EDA)", category: "Company Career Page", applyLink: "https://jobs.siemens.com/jobs", contactEmail: "" },
   { company: "Aldec", category: "Company Career Page", applyLink: "https://www.aldec.com/en/company/careers", contactEmail: "" },
   { company: "Wind River Systems", category: "Company Career Page", applyLink: "https://www.windriver.com/careers", contactEmail: "" },
-  { company: "QNX (BlackBerry)", category: "Company Career Page", applyLink: "https://www.blackberry.com/us/en/company/careers", contactEmail: "" },
   { company: "Ittiam Systems", category: "Company Career Page", applyLink: "https://www.ittiam.com/careers", contactEmail: "" },
   { company: "Mistral Solutions", category: "Company Career Page", applyLink: "https://www.mistralsolutions.com/careers", contactEmail: "" },
   { company: "Sasken Technologies", category: "Company Career Page", applyLink: "https://www.sasken.com/careers", contactEmail: "" },

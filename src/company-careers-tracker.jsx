@@ -4,8 +4,9 @@ import { Filter, Plus, Download, Upload, Trash2, MoreVertical, X } from 'lucide-
 //import { ChevronDown, Filter, Plus, Download, Upload, Trash2, Link as LinkIcon, Mail, MoreVertical, X } from 'lucide-react';
 import companyData from "./data/companyData";
 import jobPortalAgencyData from './data/jobportalAgency';
+import VisaSponsorData from './data/visasponsorship';
 
-const predefinedData = [...companyData, ...jobPortalAgencyData];
+const predefinedData = [...companyData, ...jobPortalAgencyData, ...VisaSponsorData];
 
 const uniquePredefinedData = Array.from(
   new Map(predefinedData.map(c => [c.company.toLowerCase(), c])).values()
@@ -49,6 +50,7 @@ const CompanyCareersTracker = () => {
     'Recruitment Agency India',
     'Recruitment Agency Singapore',
     'LinkedIn',
+    "Visa Sponsorship",
     'Internal',
     'Referral',
     'Germany',
@@ -61,6 +63,7 @@ const CompanyCareersTracker = () => {
     { label: "Recruitment Agency India", emoji: "🇮🇳" },
     { label: "Recruitment Agency Singapore", emoji: "🇸🇬" },
     { label: "LinkedIn", emoji: "💼" },
+    { label: "Visa Sponsorship", emoji: "✈️" },
     { label: "Internal", emoji: "🏠" },
     { label: "Referral", emoji: "🤝" },
     { label: "Germany", emoji: "🇩🇪" },
@@ -206,6 +209,7 @@ const CompanyCareersTracker = () => {
         const jobTitle = r.jobTitle?.toLowerCase() || "";
         const email = r.contactEmail?.toLowerCase() || "";
 
+
         return (
           company.includes(term) ||
           jobTitle.includes(term) ||
@@ -237,6 +241,10 @@ const CompanyCareersTracker = () => {
       } else if (sortBy === 'category') {
         aVal = a.category.toLowerCase();
         bVal = b.category.toLowerCase();
+      }
+      else if (sortBy === "score") {
+        aVal = Number(a.score || 0);
+        bVal = Number(b.score || 0);
       }
 
       if (aVal < bVal) return sortOrder === 'asc' ? -1 : 1;
@@ -363,40 +371,40 @@ const CompanyCareersTracker = () => {
   };
 
   const getTimeAgo = (date) => {
-  if (!date) return "Never";
+    if (!date) return "Never";
 
-  const now = new Date();
-  const past = new Date(date);
+    const now = new Date();
+    const past = new Date(date);
 
-  const diffMs = now - past;
+    const diffMs = now - past;
 
-  const diffMinutes = Math.floor(diffMs / (1000 * 60));
-  const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
-  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const diffMinutes = Math.floor(diffMs / (1000 * 60));
+    const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
-  if (diffMinutes < 1) return "Just now";
-  if (diffMinutes < 60) return `${diffMinutes}m ago`;
-  if (diffHours < 24) return `${diffHours}h ago`;
+    if (diffMinutes < 1) return "Just now";
+    if (diffMinutes < 60) return `${diffMinutes}m ago`;
+    if (diffHours < 24) return `${diffHours}h ago`;
 
-  if (diffDays === 1) return "Yesterday";
-  if (diffDays < 7) return `${diffDays}d ago`;
+    if (diffDays === 1) return "Yesterday";
+    if (diffDays < 7) return `${diffDays}d ago`;
 
-  if (diffDays < 30) {
-    const weeks = Math.floor(diffDays / 7);
-    const days = diffDays % 7;
+    if (diffDays < 30) {
+      const weeks = Math.floor(diffDays / 7);
+      const days = diffDays % 7;
 
-    return days > 0
-      ? `${weeks}w ${days}d ago`
-      : `${weeks}w ago`;
-  }
+      return days > 0
+        ? `${weeks}w ${days}d ago`
+        : `${weeks}w ago`;
+    }
 
-  const months = Math.floor(diffDays / 30);
-  const remainingDays = diffDays % 30;
+    const months = Math.floor(diffDays / 30);
+    const remainingDays = diffDays % 30;
 
-  return remainingDays > 0
-    ? `${months}mo ${remainingDays}d ago`
-    : `${months}mo ago`;
-};
+    return remainingDays > 0
+      ? `${months}mo ${remainingDays}d ago`
+      : `${months}mo ago`;
+  };
 
   const getCategoryColor = (category) => {
     const colors = {
@@ -617,6 +625,7 @@ const CompanyCareersTracker = () => {
               className="px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
               <option value="lastVisited">Last Visited</option>
+              <option value="score">Score</option>
               <option value="company">Company Name</option>
               <option value="category">Category</option>
             </select>
@@ -688,6 +697,7 @@ const CompanyCareersTracker = () => {
                   <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Last Visited</th>
                   <th className="px-6 py-4 text-sm font-semibold text-slate-700">Apply</th>
                   <th className="px-6 py-4 text-sm font-semibold text-slate-700">Email</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-slate-700">Score</th>
                   <th className="px-6 py-4 text-center text-sm font-semibold text-slate-700">Actions</th>
                 </tr>
               </thead>
@@ -781,6 +791,20 @@ const CompanyCareersTracker = () => {
                         ) : (
                           <span className="text-slate-400 text-sm">—</span>
                         )}
+                      </td>
+                      <td className="px-6 py-2">
+                        <span
+                          className={`inline-flex items-center justify-center min-w-[42px] px-2 py-1 rounded-full text-sm font-bold ${Number(record.score || 0) >= 9
+                            ? "bg-green-100 text-green-800"
+                            : Number(record.score || 0) >= 7
+                              ? "bg-blue-100 text-blue-800"
+                              : Number(record.score || 0) >= 5
+                                ? "bg-yellow-100 text-yellow-800"
+                                : "bg-slate-100 text-slate-600"
+                            }`}
+                        >
+                          {record.score ?? "-"}
+                        </span>
                       </td>
                       <td className="px-6 py-2 text-center">
                         <button
@@ -946,6 +970,29 @@ const CompanyCareersTracker = () => {
                     rows="3"
                     className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-2">
+                    Score
+                  </label>
+
+                  <select
+                    value={formData.score}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        score: Number(e.target.value)
+                      })
+                    }
+                    className="w-full px-4 py-2 border border-slate-300 rounded-lg"
+                  >
+                    <option value={0}>Select Score</option>
+                    {[10, 9, 8, 7, 6, 5, 4, 3, 2, 1].map(score => (
+                      <option key={score} value={score}>
+                        {score}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
             </div>
