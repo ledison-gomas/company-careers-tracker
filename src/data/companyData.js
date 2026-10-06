@@ -543,6 +543,132 @@ const companyData = [
   { company: "Thoughtworks", category: "Company Career Page", applyLink: "https://www.thoughtworks.com/careers", contactEmail: "" },
   { company: "Publicis Sapient", category: "Company Career Page", applyLink: "https://careers.publicissapient.com", contactEmail: "" },
   { company: "Cognizant", category: "Company Career Page", applyLink: "https://careers.cognizant.com", contactEmail: "" },
+
+    // ── Investment Banks & Global Banks (Bengaluru / Chennai) ──
+  { company: "Wells Fargo", category: "Company Career Page", applyLink: "https://www.wellsfargo.com/about/careers", contactEmail: "" },
+  { company: "JPMorgan Chase", category: "Company Career Page", applyLink: "https://careers.jpmorgan.com", contactEmail: "" },
+  { company: "Barclays", category: "Company Career Page", applyLink: "https://home.barclays/careers", contactEmail: "" },
+  { company: "Deutsche Bank", category: "Company Career Page", applyLink: "https://careers.db.com", contactEmail: "" },
+  { company: "UBS", category: "Company Career Page", applyLink: "https://www.ubs.com/global/en/careers.html", contactEmail: "" },
+  { company: "Societe Generale", category: "Company Career Page", applyLink: "https://careers.societegenerale.com", contactEmail: "" },
+  { company: "BNP Paribas", category: "Company Career Page", applyLink: "https://careers.bnpparibas.com", contactEmail: "" },
+  { company: "HSBC", category: "Company Career Page", applyLink: "https://www.hsbc.com/careers", contactEmail: "" },
+  { company: "Citi", category: "Company Career Page", applyLink: "https://careers.citigroup.com", contactEmail: "" },
+  { company: "Bank of America", category: "Company Career Page", applyLink: "https://careers.bankofamerica.com", contactEmail: "" },
+  { company: "NatWest Group", category: "Company Career Page", applyLink: "https://jobs.natwestgroup.com", contactEmail: "" },
+  { company: "Lloyds Banking Group", category: "Company Career Page", applyLink: "https://careers.lloydsbankinggroup.com", contactEmail: "" },
+  { company: "Macquarie Group", category: "Company Career Page", applyLink: "https://careers.macquarie.com", contactEmail: "" },
+  { company: "State Street", category: "Company Career Page", applyLink: "https://careers.statestreet.com", contactEmail: "" },
+  { company: "Fidelity Investments", category: "Company Career Page", applyLink: "https://jobs.fidelity.com", contactEmail: "" },
+  { company: "Franklin Templeton", category: "Company Career Page", applyLink: "https://careers.franklintempleton.com", contactEmail: "" },
+  { company: "Vanguard", category: "Company Career Page", applyLink: "https://www.vanguardjobs.com", contactEmail: "" },
+  { company: "Charles Schwab", category: "Company Career Page", applyLink: "https://careers.schwab.com", contactEmail: "" },
+  { company: "American Express", category: "Company Career Page", applyLink: "https://careers.americanexpress.com", contactEmail: "" },
+  { company: "ION Group", category: "Company Career Page", applyLink: "https://iongroup.com/careers", contactEmail: "" },
+
+  // ── HFT / Quant / Prop Trading (Bengaluru) ──
+  { company: "D.E. Shaw", category: "Company Career Page", applyLink: "https://www.deshaw.com/careers", contactEmail: "" },
+  { company: "WorldQuant", category: "Company Career Page", applyLink: "https://www.worldquant.com/careers", contactEmail: "" },
+  { company: "Graviton Research Capital", category: "Company Career Page", applyLink: "https://www.gravitontrading.com/careers", contactEmail: "" },
+  { company: "Quadeye", category: "Company Career Page", applyLink: "https://quadeye.com/careers", contactEmail: "" },
+  { company: "NK Securities", category: "Company Career Page", applyLink: "https://nksecurities.com/careers", contactEmail: "" },
+  { company: "AlphaGrep", category: "Company Career Page", applyLink: "https://www.alphagrep.com/careers", contactEmail: "" },
+  { company: "Estee Advisors", category: "Company Career Page", applyLink: "https://www.esteeadvisors.com/careers", contactEmail: "" },
+  { company: "Squarepoint Capital", category: "Company Career Page", applyLink: "https://www.squarepoint-capital.com/careers", contactEmail: "" },
+  { company: "Qube Research & Technologies", category: "Company Career Page", applyLink: "https://www.qube-rt.com/careers", contactEmail: "" },
+  { company: "Marshall Wace", category: "Company Career Page", applyLink: "https://www.mwam.com/careers", contactEmail: "" },
+  { company: "Point72", category: "Company Career Page", applyLink: "https://point72.com/careers", contactEmail: "" },
+  { company: "Balyasny Asset Management", category: "Company Career Page", applyLink: "https://www.balyasny.com/careers", contactEmail: "" },
+  { company: "AQR Capital Management", category: "Company Career Page", applyLink: "https://www.aqr.com/About-Us/Careers", contactEmail: "" },
+  { company: "Millennium Management", category: "Company Career Page", applyLink: "https://www.mlp.com/careers", contactEmail: "" },
+
+  // ── FinTech / Financial Data (Bengaluru / Chennai) ──
+  { company: "Fiserv", category: "Company Career Page", applyLink: "https://careers.fiserv.com", contactEmail: "" },
+  { company: "Finastra", category: "Company Career Page", applyLink: "https://www.finastra.com/careers", contactEmail: "" },
+  { company: "MSCI", category: "Company Career Page", applyLink: "https://careers.msci.com", contactEmail: "" },
+  { company: "S&P Global", category: "Company Career Page", applyLink: "https://careers.spglobal.com", contactEmail: "" },
+  { company: "Moody's", category: "Company Career Page", applyLink: "https://careers.moodys.com", contactEmail: "" },
+  { company: "Refinitiv (LSEG)", category: "Company Career Page", applyLink: "https://careers.lseg.com", contactEmail: "" },
+  { company: "FactSet", category: "Company Career Page", applyLink: "https://careers.factset.com", contactEmail: "" },
+  { company: "Morningstar", category: "Company Career Page", applyLink: "https://www.morningstar.com/careers", contactEmail: "" },
+  { company: "Broadridge Financial", category: "Company Career Page", applyLink: "https://careers.broadridge.com", contactEmail: "" },
+  { company: "SS&C Technologies", category: "Company Career Page", applyLink: "https://www.ssctech.com/careers", contactEmail: "" },
+  { company: "Murex", category: "Company Career Page", applyLink: "https://www.murex.com/careers", contactEmail: "" },
+  { company: "Temenos", category: "Company Career Page", applyLink: "https://www.temenos.com/careers", contactEmail: "" },
+  { company: "Avaloq", category: "Company Career Page", applyLink: "https://www.avaloq.com/careers", contactEmail: "" },
+  { company: "Adenza (Nasdaq)", category: "Company Career Page", applyLink: "https://www.nasdaq.com/about/careers", contactEmail: "" },
+  { company: "NSE India", category: "Company Career Page", applyLink: "https://www.nseindia.com/about-us/careers", contactEmail: "" },
+  { company: "CDSL", category: "Company Career Page", applyLink: "https://www.cdslindia.com/careers", contactEmail: "" },
+  { company: "FIS Global", category: "Company Career Page", applyLink: "https://careers.fisglobal.com", contactEmail: "" },
+
+  // ── Indian Tech / Startups (Bengaluru / Chennai) ──
+  { company: "Flipkart", category: "Company Career Page", applyLink: "https://www.flipkartcareers.com", contactEmail: "" },
+  { company: "Swiggy", category: "Company Career Page", applyLink: "https://careers.swiggy.com", contactEmail: "" },
+  { company: "Ola", category: "Company Career Page", applyLink: "https://ola.io/careers", contactEmail: "" },
+  { company: "PhonePe", category: "Company Career Page", applyLink: "https://www.phonepe.com/careers", contactEmail: "" },
+  { company: "Paytm", category: "Company Career Page", applyLink: "https://paytm.com/careers", contactEmail: "" },
+  { company: "CRED", category: "Company Career Page", applyLink: "https://careers.cred.club", contactEmail: "" },
+  { company: "Groww", category: "Company Career Page", applyLink: "https://groww.in/careers", contactEmail: "" },
+  { company: "Zerodha", category: "Company Career Page", applyLink: "https://careers.zerodha.com", contactEmail: "" },
+  { company: "Upstox", category: "Company Career Page", applyLink: "https://upstox.com/careers", contactEmail: "" },
+  { company: "Meesho", category: "Company Career Page", applyLink: "https://careers.meesho.com", contactEmail: "" },
+  { company: "ShareChat", category: "Company Career Page", applyLink: "https://sharechat.com/careers", contactEmail: "" },
+  { company: "InMobi", category: "Company Career Page", applyLink: "https://www.inmobi.com/company/careers", contactEmail: "" },
+  { company: "Myntra", category: "Company Career Page", applyLink: "https://careers.myntra.com", contactEmail: "" },
+  { company: "Udaan", category: "Company Career Page", applyLink: "https://careers.udaan.com", contactEmail: "" },
+  { company: "Zomato", category: "Company Career Page", applyLink: "https://careers.zomato.com", contactEmail: "" },
+
+  // ── MNC Tech / Product (Bengaluru / Chennai) ──
+  { company: "Adobe", category: "Company Career Page", applyLink: "https://careers.adobe.com", contactEmail: "" },
+  { company: "Intuit", category: "Company Career Page", applyLink: "https://careers.intuit.com", contactEmail: "" },
+  { company: "Walmart Global Tech", category: "Company Career Page", applyLink: "https://careers.walmart.com/technology", contactEmail: "" },
+  { company: "Target", category: "Company Career Page", applyLink: "https://jobs.target.com", contactEmail: "" },
+  { company: "Tesco", category: "Company Career Page", applyLink: "https://www.tescocareers.com", contactEmail: "" },
+  { company: "Lowe's", category: "Company Career Page", applyLink: "https://talent.lowes.com", contactEmail: "" },
+  { company: "Sabre", category: "Company Career Page", applyLink: "https://careers.sabre.com", contactEmail: "" },
+  { company: "Amadeus", category: "Company Career Page", applyLink: "https://careers.amadeus.com", contactEmail: "" },
+  { company: "Travelport", category: "Company Career Page", applyLink: "https://careers.travelport.com", contactEmail: "" },
+  { company: "Citrix (Cloud Software Group)", category: "Company Career Page", applyLink: "https://careers.cloud.com", contactEmail: "" },
+  { company: "Imperva (Thales)", category: "Company Career Page", applyLink: "https://www.imperva.com/company/careers", contactEmail: "" },
+  { company: "Barracuda Networks", category: "Company Career Page", applyLink: "https://www.barracuda.com/company/careers", contactEmail: "" },
+
+  // ── Gaming (Bengaluru) ──
+  { company: "Zynga", category: "Company Career Page", applyLink: "https://www.zynga.com/careers", contactEmail: "" },
+  { company: "Rockstar Games", category: "Company Career Page", applyLink: "https://www.rockstargames.com/careers", contactEmail: "" },
+  { company: "Nazara Technologies", category: "Company Career Page", applyLink: "https://nazara.com/careers", contactEmail: "" },
+
+  // ── Automotive R&D – Systems / Simulation (Bengaluru) ──
+  { company: "Mercedes-Benz R&D India", category: "Company Career Page", applyLink: "https://careers.mercedes-benz.com", contactEmail: "" },
+  { company: "BMW Group India", category: "Company Career Page", applyLink: "https://www.bmwgroup.jobs", contactEmail: "" },
+  { company: "Volvo Group India", category: "Company Career Page", applyLink: "https://jobs.volvogroup.com", contactEmail: "" },
+
+  // ── Energy / Oil & Gas – Simulation & HPC (Bengaluru / Chennai) ──
+  { company: "Shell", category: "Company Career Page", applyLink: "https://careers.shell.com", contactEmail: "" },
+  { company: "BP", category: "Company Career Page", applyLink: "https://careers.bp.com", contactEmail: "" },
+
+  // ── IT Services & Consulting (Bengaluru / Chennai) ──
+  { company: "Virtusa", category: "Company Career Page", applyLink: "https://www.virtusa.com/careers", contactEmail: "" },
+  { company: "Synechron", category: "Company Career Page", applyLink: "https://www.synechron.com/careers", contactEmail: "" },
+  { company: "Globant", category: "Company Career Page", applyLink: "https://careers.globant.com", contactEmail: "" },
+  { company: "Ramco Systems", category: "Company Career Page", applyLink: "https://www.ramco.com/careers", contactEmail: "" },
+
+  // ── Enterprise / POS / Payments (Bengaluru / Chennai) ──
+  { company: "NCR Corporation", category: "Company Career Page", applyLink: "https://www.ncr.com/careers", contactEmail: "" },
+  { company: "Diebold Nixdorf", category: "Company Career Page", applyLink: "https://www.dieboldnixdorf.com/careers", contactEmail: "" },
+
+  // ── Banking Platform / SaaS (Bengaluru) ──
+  { company: "Simcorp", category: "Company Career Page", applyLink: "https://www.simcorp.com/careers", contactEmail: "" },
+  { company: "Backbase", category: "Company Career Page", applyLink: "https://www.backbase.com/careers", contactEmail: "" },
+  { company: "nCino", category: "Company Career Page", applyLink: "https://www.ncino.com/company/careers", contactEmail: "" },
+  { company: "Thought Machine", category: "Company Career Page", applyLink: "https://www.thoughtmachine.net/careers", contactEmail: "" },
+
+  // ── Data / Analytics / Healthcare IT (Bengaluru / Chennai) ──
+  { company: "Dun & Bradstreet", category: "Company Career Page", applyLink: "https://careers.dnb.com", contactEmail: "" },
+  { company: "Experian", category: "Company Career Page", applyLink: "https://www.experian.com/careers", contactEmail: "" },
+  { company: "Optum (UnitedHealth)", category: "Company Career Page", applyLink: "https://careers.unitedhealthgroup.com", contactEmail: "" },
+
+  // ── Geospatial / Infrastructure Software (Bengaluru / Chennai) ──
+  { company: "Trimble", category: "Company Career Page", applyLink: "https://careers.trimble.com", contactEmail: "" },
 ];
 
 export default companyData;
